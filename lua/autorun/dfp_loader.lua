@@ -141,9 +141,18 @@ end
 include("dfp/shared.lua")
 
 if SERVER then
+
     include("dfp/server.lua")
+
+    AddCSLuaFile("dfp/shared.lua")
+    AddCSLuaFile("dfp/client.lua")
+    AddCSLuaFile("dfp/menu.lua")
+
 else
+
     include("dfp/client.lua")
+    include("dfp/menu.lua")
+
 end
 
 hook.Add("Initialize", "dfp.Initalize", function()
