@@ -12,7 +12,7 @@ Available Hooks:
 
 --]]
 
-DynamicFirstPerson.Initalize = function()
+DynamicFirstPerson.Initialize = function()
 
     -- Init ConVars
     DynamicFirstPerson.ConVars = DynamicFirstPerson.ConVars or {}
@@ -156,13 +156,13 @@ else
 end
 
 hook.Add("Initialize", "dfp.Initalize", function()
-    DynamicFirstPerson.Initalize()
+    DynamicFirstPerson.Initialize()
     hook.Run("DFPInitialize")
     DynamicFirstPerson.Print("Initialized!")
 end)
 
 concommand.Add("dfp_reload", function()
-    DynamicFirstPerson.Initalize()
+    DynamicFirstPerson.Initialize()
     hook.Run("DFPReload")
     DynamicFirstPerson.Print("Reloaded!")
 end, nil, "Reload the Dynamic First Person addon.")
